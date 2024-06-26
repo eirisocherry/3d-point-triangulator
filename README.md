@@ -3,7 +3,9 @@ Is an After Effects script that allows you to quickly extract 3d coordinates.
 Requirement: 3d camera data.  
 
 ## Credits
-Author: `fadaaszhi` (discord)  
+Expressions: `fadaaszhi` (discord)  
+Script: `shy_rikki` (discord)  
+https://www.youtube.com/@shy_rikki  
 
 ## Installation
 1. Download the script: https://github.com/eirisocherry/3d-point-triangulator/releases  
