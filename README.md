@@ -3,7 +3,7 @@ Is an After Effects script that allows you to quickly extract 3d coordinates.
 Requirement: 3d camera data.  
 
 ## Credits
-Expressions: `fadaaszhi` (discord)  
+Expression: `fadaaszhi` (discord)  
 Script: `shy_rikki` (discord)  
 https://www.youtube.com/@shy_rikki  
 
