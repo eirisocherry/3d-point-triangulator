@@ -14,13 +14,12 @@ https://www.youtube.com/@shy_rikki
 3. Restart After Effects.  
 
 ## Usage
-1. Press [Add Point] button.  
-2. Select the "Point Triangulator".  
-3. Animate the "Point" property:  
-Set a cursor to the location you want to extract 3d coordinates from, play a video a bit, set a cursor to the same location (only 2 keyframes needed).  
-4. If you did everything correctly, a solid will appear exactly in your location.  
-Select "Point Triangulator" layer and press [Set Point] button to bake the expressions.  
-5. Paste the solid's position to any objects you want (light, null etc)  
 
-If you want to spawn a solid with custom orientation, use [Add Surface] and [Set Surface] buttons instead.  
-The process is absolutely the same as with [Add Point] & [Set Point] buttons except you'll need to animate three "Point" parameters at once (2 keyframes needed for each).  
+https://github.com/eirisocherry/3d-point-triangulator/assets/115040224/60ae2548-3f5e-4ced-9de3-80a75cc357a5  
+
+1. Press [+] button to add a setup.  
+2. Select the "Extractor (Controller)".  
+3. Animate the "Location" property:  
+Set a cursor to the location you want to extract 3d coordinates from, play a video a bit, set a cursor to the same location (only 2 keyframes needed).  
+If you did everything correctly, a solid will appear exactly in your location.  
+5. Select "Extractor (Controller)" and press [Convert to] button to get a desired object.  
