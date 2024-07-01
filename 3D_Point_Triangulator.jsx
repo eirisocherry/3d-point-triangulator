@@ -10,7 +10,7 @@ function pointTriangulator(thisObj) {
 
     // About
     var name = "3D Point Triangulator";
-    var version = "1.0";
+    var version = "1.1";
 
     // Build UI
     var dropdownMenuSelection;
@@ -157,7 +157,9 @@ function pointTriangulator(thisObj) {
         newSolid.threeDLayer = true;
         newSolid.transform.scale.setValue([100, 100, 100]);
         newSolid.transform.opacity.setValue(60);
-        newSolid.property("ADBE Material Options Group").property("ADBE Accepts Lights").setValue(0);
+        if (comp.renderer == "ADBE Advanced 3d") {
+            newSolid.property("ADBE Material Options Group").property("ADBE Accepts Lights").setValue(0);
+        }
         newSolid.startTime = camera.startTime;
         newSolid.inPoint = camera.inPoint;
         newSolid.outPoint = camera.outPoint;
@@ -244,7 +246,9 @@ function pointTriangulator(thisObj) {
         var projectedOpacityValue = projectionLayer.transform.opacity.valueAtTime(comp.time, false);
         var projectedLayerWidth = projectionLayer.width;
         var projectedLayerHeight = projectionLayer.height;
-        var projectedAcceptsLights = projectionLayer.property("ADBE Material Options Group").property("ADBE Accepts Lights").value;
+        if (comp.renderer == "ADBE Advanced 3d") {
+            var projectedAcceptsLights = projectionLayer.property("ADBE Material Options Group").property("ADBE Accepts Lights").value;
+        }
 
         switch (dropdownMenuSelection) {
             case 'Point Light':
@@ -294,7 +298,9 @@ function pointTriangulator(thisObj) {
                 newSolid.transform.orientation.setValue(projectedOrientationValue);
                 newSolid.transform.scale.setValue(projectedScaleValue);
                 newSolid.transform.opacity.setValue(projectedOpacityValue);
-                newSolid.property("ADBE Material Options Group").property("ADBE Accepts Lights").setValue(projectedAcceptsLights);
+                if (comp.renderer == "ADBE Advanced 3d") {
+                    newSolid.property("ADBE Material Options Group").property("ADBE Accepts Lights").setValue(projectedAcceptsLights);
+                }
                 newSolid.startTime = mainLayer.startTime;
                 newSolid.inPoint = mainLayer.inPoint;
                 newSolid.outPoint = mainLayer.outPoint;
@@ -456,7 +462,7 @@ function pointTriangulator(thisObj) {
 
         if (alertMessage.length != 0) {
             alertShow();
-        } else if (controllerFound){
+        } else if (controllerFound) {
             alertCopy("All setups were deleted.")
         } else {
             alertCopy("Nothing to delete. Select at least one 'Extractor (Controller)' to delete a setup.")
